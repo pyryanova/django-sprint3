@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Посты от @{{ author.username }}{% endblock %}
+{% block content %}
+  <h1 class="mb-5">Посты от @{{ author.username }}</h1>
+  {% for post in posts %}
+    <article class="mb-5">
+      {% include "includes/post_card.html" %}
+    </article>
+  {% endfor %}
+{% endblock %}
